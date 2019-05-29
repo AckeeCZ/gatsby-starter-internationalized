@@ -1,8 +1,8 @@
 home.title: "Domovská stránka"
-home.main:
-    'Pokud potřebujete pomoct, jděte na <a href="https://www.gatsbyjs.org/docs/" target="_blank">Gatsby dokumentace</a> nebo na
+home.main: '<h1>Domovská stránka</h1>
+    <p>Pokud potřebujete pomoct, jděte na <a href="https://www.gatsbyjs.org/docs/" target="_blank">Gatsby dokumentace</a> nebo na
     <a href="https://github.com/AckeeCZ/gatsby-starter-internationalized" target="_blank">web starteru</a>.
-    <br/ >
+    </p>
     <h2>Další doporučené zdroje</h2>
     <ul>
     <li><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-default/" >Gatsby Starter Default</a>

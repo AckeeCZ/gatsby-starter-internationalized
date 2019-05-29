@@ -1,7 +1,8 @@
 home.title: "Homepage"
-home.main:
-    'If you need any help, try <a href="https://www.gatsbyjs.org/docs/" target="_blank">Gatsby docs</a> or <a href="https://github.com/AckeeCZ/gatsby-starter-internationalized" target="_blank">starter web</a>.
-    <br/ >
+home.main: '<h1>Homepage</h1>
+    <p>
+    If you need any help, try <a href="https://www.gatsbyjs.org/docs/" target="_blank">Gatsby docs</a> or <a href="https://github.com/AckeeCZ/gatsby-starter-internationalized" target="_blank">starter web</a>.
+    </p>
     <h2>Might help you</h2>
     <ul>
     <li><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-default/" >Gatsby Starter Default</a>

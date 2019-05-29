@@ -21,10 +21,7 @@ const IndexPage = ({ intl }) => (
         </Helmet>
         <Header />
         <main>
-            <h1>
-                <FormattedMessage id="home.title" />
-            </h1>
-            <FormattedHTMLMessage id="home.main" tagName="p" />
+            <FormattedHTMLMessage id="home.main" tagName="div" />
             <img src={astronaut} alt="" />
         </main>
         <footer>
