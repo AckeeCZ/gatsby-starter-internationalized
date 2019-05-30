@@ -12,22 +12,24 @@ Gatsby v2 starter based on [gatsby-starter-intl](https://github.com/tomekskuta/g
 
 ## Features
 
--   internationalized pages (via `react-intl`)
--   internationalized routes (via configuration)
--   `LocalizedLink` component to create a link based on a current locale
--   `LanguageSwitcher` component to create a language switcher based on the configuration
+-   **internationalized page content** - via `react-intl`
+-   **internationalized routes** - via language configuration
+-   **lightweight** - only internationalization code
 
-**The starter includes just code important for internationalization, the rest is up to you**
+-   `LocalizedLink` - built-in link component handling route generation
+-   `LanguageSwitcher` - built-in language switcher
+
+**The starter includes only code important for internationalization, the rest is up to you**
 
 ## How to start
 
-To use **Gatsby starter intl** you have to install Gatsby CLI
+To use **Gatsby** you have to install Gatsby CLI
 
 ```sh
 npm install global gatsby-cli
 ```
 
-Then use it to start new project based on **Gatsby starter internationalized**
+Then use it to start new project based on **gatsby-starter-internationalized**
 
 ```sh
 gatsby new your-project-name https://github.com/AckeeCZ/gatsby-starter-internationalized
@@ -46,12 +48,12 @@ Gatsby creates **static pages** for every language sets in the configuration in 
 Say you have two languages:
 
 -   `cs` ,
--   `en` and is a default language.
+-   `en` and is a default language,
 
 Gatsby then creates:
 
 -   `/cs/stranka1`,
--   `/page1`, base on the configuration.
+-   `/page1`, (names depend on your configuration).
 
 ### Translations
 
@@ -69,12 +71,12 @@ home.title: "Homepage"
 
 ### Languages
 
-Languages list is in `src/i18n/languages.js`. Elements of array has attrs:
+Language list is in `src/i18n/languages.js`. Elements of array have following attributes:
 
--   locale - key to identify your locale,
--   label - pretty name of your locale to display in list or buttons in your UI.
--   default - if true it is fallback language for app.
--   routes - an object with translations for app routes
+-   locale - a key to identify your locale,
+-   label - a locale name,
+-   default - a flag if the language is default,
+-   routes - an object with translations for app routes,
 
 Example:
 
@@ -82,22 +84,29 @@ Example:
 {
         locale: "cs",
         label: "Čeština",
-        default: false,
         routes: {
             "/": "/",
             "/page1": "/stranka1",
             "/subpage/page1": "/podstranka/stranka1",
         }
     },
+    {
+        locale: "en",
+        label: "English",
+        default: true,
+        routes: {
+            "/": "/",
+            "/page1": "/page1",
+            "/subpage/page1": "/subpage/page1",
+        }
+    },
 ```
 
 ### PageContext
 
-HOC `withPageContext` (`./src/pageContext/withPageContext.jsx`) wraps your page with `react-intl` provider.
+`withPageContext` wraps your page with `react-intl` provider and our own `PageContext` provider.
 
-It injects `locale` and `originalPath` into a page via react `PageContext`, you can find its usage in `./src/components/LocalizedLink` or `./src/components/LanguageSwitcher` components
-
-To make internationalization working, you have to wrap your pages with `withPageContext` HOC.
+`PageContext` includes `locale` and `originalPath` you can use in your pages. It is used by `LocalizedLink` to create correct link and by `LanguageSwitcher` to switch to correct language version of a page.
 
 ```jsx
 // src/pages/my-page.jsx
