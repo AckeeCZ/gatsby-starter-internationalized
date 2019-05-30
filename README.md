@@ -105,10 +105,9 @@ Example:
 ```
 
 ### PageContext
+`PageContext` includes `locale` and `originalPath` you can use in your pages. It is used by `LocalizedLink` to create correct link and by `LanguageSwitcher` to switch to correct language version of a page.
 
 `withPageContext` wraps your page with `react-intl` provider and our own `PageContext` provider.
-
-`PageContext` includes `locale` and `originalPath` you can use in your pages. It is used by `LocalizedLink` to create correct link and by `LanguageSwitcher` to switch to correct language version of a page.
 
 ```jsx
 // src/pages/my-page.jsx
