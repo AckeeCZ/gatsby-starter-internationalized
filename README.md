@@ -77,7 +77,7 @@ Language list is in `src/i18n/languages.js`. Elements of array have following at
 
 -   locale - a key to identify your locale,
 -   label - a locale name,
--   default - a flag if the language is default,
+-   default - a flag if the language is default (routes won't be prepend with locale),
 -   routes - an object with translations for app routes,
 
 Example:
