@@ -8,6 +8,8 @@
 
 Gatsby v2 starter based on [gatsby-starter-intl](https://github.com/tomekskuta/gatsby-starter-intl).
 
+[Checkout the demo!](https://gatsby-starter-internationalized.ack.ee)
+
 ## Features
 
 -   internationalized pages (via `react-intl`)
