@@ -14,10 +14,10 @@ Gatsby v2 starter based on [gatsby-starter-intl](https://github.com/tomekskuta/g
 
 -   **internationalized page content** - via `react-intl`
 -   **internationalized routes** - via language configuration
--   **lightweight** - only internationalization code
+-   **lightweight** - includes only internationalization code
 
 -   `LocalizedLink` - built-in link component handling route generation
--   `LanguageSwitcher` - built-in language switcher
+-   `LanguageSwitcher` - built-in language switcher component
 
 **The starter includes only code important for internationalization, the rest is up to you**
 
@@ -53,7 +53,9 @@ Say you have two languages:
 Gatsby then creates:
 
 -   `/cs/stranka1`,
--   `/page1`, (names depend on your configuration).
+-   `/page1`, 
+
+names depend on your configuration.
 
 ### Translations
 
