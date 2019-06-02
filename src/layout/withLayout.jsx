@@ -1,6 +1,7 @@
 import React from "react";
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 import { getDisplayName } from "../utils";
 
@@ -12,6 +13,7 @@ const withLayout = Component => {
             <React.Fragment>
                 <Header />
                 <Component {...props} />
+                <Footer />
             </React.Fragment>
         );
     };

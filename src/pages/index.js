@@ -17,9 +17,6 @@ const IndexPage = ({ intl }) => (
             <FormattedHTMLMessage id="home.main" tagName="div" />
             <img src={astronaut} alt="" />
         </main>
-        <footer>
-            <FormattedHTMLMessage id="home.footer" />
-        </footer>
     </React.Fragment>
 );
 

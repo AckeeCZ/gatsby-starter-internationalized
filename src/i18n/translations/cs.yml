@@ -7,7 +7,7 @@ home.main: '<h1>Domovská stránka</h1>
     <ul>
     <li><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-default/" >Gatsby Starter Default</a>
     <li><a href="https://www.gatsbyjs.org/starters/tomekskuta/gatsby-starter-intl/" >Gatsby Starter Intl</a></ul>'
-home.footer: '© 2019, Built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>'
+footer.title: '© 2019, Vytvořeno s pomocí <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>'
 page1.title: "Stránka 1"
 subpage.page1.title: "Podstránka 1"
 subpage.subsubpage.page1.title: "Podpodstránka 1"
