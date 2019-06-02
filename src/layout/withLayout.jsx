@@ -1,12 +1,19 @@
 import React from "react";
 
+import Header from "../components/Header";
+
 import { getDisplayName } from "../utils";
 
 import "../styles/common.sass";
-// You can implement your layout here, I'm just adding some styles :))
+
 const withLayout = Component => {
     const WrapperComponent = props => {
-        return <Component {...props} />;
+        return (
+            <React.Fragment>
+                <Header />
+                <Component {...props} />
+            </React.Fragment>
+        );
     };
     WrapperComponent.displayName = `Layout(${getDisplayName(Component)})`;
     return WrapperComponent;

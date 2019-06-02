@@ -6,7 +6,6 @@ import { compose } from "recompose";
 import withLayout from "../../../layout";
 import withPageContext from "../../../pageContext";
 
-import Header from "../../../components/Header";
 import Link from "../../../components/LocalizedLink";
 
 const Page1 = ({ intl }) => (
@@ -16,7 +15,6 @@ const Page1 = ({ intl }) => (
                 {intl.formatMessage({ id: "subpage.subsubpage.page1.title" })}
             </title>
         </Helmet>
-        <Header />
         <main>
             <h1>
                 <FormattedMessage id="subpage.subsubpage.page1.title" />
