@@ -4,8 +4,7 @@ import { Link } from "gatsby";
 import cs from "../../images/cs.png";
 import en from "../../images/en.png";
 
-import languages from "../../i18n/languages";
-import getLocalizedPath from "../../i18n/getLocalizedPath";
+import { languages, getLocalizedPath } from "../../i18n";
 
 import { PageContext } from "../../pageContext";
 

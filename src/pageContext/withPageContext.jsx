@@ -1,17 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { IntlProvider, addLocaleData } from "react-intl";
-import csData from "react-intl/locale-data/cs";
-import enData from "react-intl/locale-data/en";
+import { IntlProvider } from "react-intl";
 
 import PageContext from "./PageContext";
 
-import { translations } from "../i18n";
+import "../i18n/config/reactIntl";
+import translations from "../i18n/translations";
 
 import "../styles/common.sass";
-
-addLocaleData([...csData, ...enData]);
 
 const withPageContext = PageComponent => props => {
     const { locale } = props.pageContext;

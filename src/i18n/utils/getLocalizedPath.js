@@ -1,4 +1,4 @@
-const languages = require("./languages");
+const languages = require("../config/languages");
 
 const defaultLanguage = languages.find(lang => lang.default);
 

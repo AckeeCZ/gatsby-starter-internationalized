@@ -1,4 +1,7 @@
-import translations from './translations';
-import languages from './languages';
+const getLocalizedPath = require("./utils/getLocalizedPath");
+const languages = require("./config/languages");
 
-export { translations, languages };
+module.exports = {
+    getLocalizedPath,
+    languages
+};
