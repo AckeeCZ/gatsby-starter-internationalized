@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import { injectIntl, intlShape, FormattedMessage } from "react-intl";
 import { compose } from "recompose";
 
+import withLayout from "../../../layout";
 import withPageContext from "../../../pageContext";
 
 import Header from "../../../components/Header";
@@ -33,5 +34,6 @@ Page1.propTypes = {
 
 export default compose(
     withPageContext,
+    withLayout,
     injectIntl
 )(Page1);

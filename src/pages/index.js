@@ -9,6 +9,7 @@ import {
 import { compose } from "recompose";
 
 import withPageContext from "../pageContext";
+import withLayout from "../layout";
 
 import Header from "../components/Header";
 
@@ -36,5 +37,6 @@ IndexPage.propTypes = {
 
 export default compose(
     withPageContext,
+    withLayout,
     injectIntl
 )(IndexPage);

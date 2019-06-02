@@ -8,17 +8,21 @@ import PageContext from "./PageContext";
 import "../i18n/config/reactIntl";
 import translations from "../i18n/translations";
 
-import "../styles/common.sass";
+import { getDisplayName } from "../utils";
 
-const withPageContext = PageComponent => props => {
-    const { locale } = props.pageContext;
-    return (
-        <IntlProvider locale={locale} messages={translations[locale]}>
-            <PageContext.Provider value={props.pageContext}>
-                <PageComponent {...props} />
-            </PageContext.Provider>
-        </IntlProvider>
-    );
+const withPageContext = Component => {
+    const WrapperComponent = props => {
+        const { locale } = props.pageContext;
+        return (
+            <IntlProvider locale={locale} messages={translations[locale]}>
+                <PageContext.Provider value={props.pageContext}>
+                    <Component {...props} />
+                </PageContext.Provider>
+            </IntlProvider>
+        );
+    };
+    WrapperComponent.displayName = `PageContext(${getDisplayName(Component)})`;
+    return WrapperComponent;
 };
 
 withPageContext.propTypes = {
