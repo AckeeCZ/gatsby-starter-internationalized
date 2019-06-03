@@ -43,7 +43,7 @@ If you want to compile production build just run `gatsby build`.
 
 ## How it works
 
-Gatsby creates **static pages** for every language sets in the configuration in `src/i18n/languages.js`.
+Gatsby creates **static pages** for every language sets in the configuration in [src/i18n/config/languages.js](src/i18n/config/languages.js).
 
 Say you have two languages:
 
@@ -59,7 +59,7 @@ names depend on your configuration.
 
 ### Translations
 
-Translations are set in `src/i18n/translations`. We use flat structure set in yaml files. There should be a yaml file for every language (`cs.yaml`, `en.yaml` etc.)
+Translations are set in [src/i18n/translations](src/i18n/translations). We use flat structure set in yaml files. There should be a yaml file for every language (`cs.yaml`, `en.yaml` etc.)
 
 ```jsx
 <FormattedMessage id="home.title" />
@@ -73,7 +73,7 @@ home.title: "Homepage"
 
 ### Languages
 
-Language list is in `src/i18n/languages.js`. Elements of array have following attributes:
+Language list is in [src/i18n/config/languages.js](src/i18n/config/languages.js). Elements of array have following attributes:
 
 -   locale - a key to identify your locale,
 -   label - a locale name,
@@ -103,6 +103,9 @@ Example:
         }
     },
 ```
+
+### React Intl locales
+Don't forget to add `react-intl` locales for your languages in [src/i18n/config/reactIntl.js](src/i18n/config/reactIntl.js).
 
 ### PageContext
 `PageContext` includes `locale` and `originalPath` you can use in your pages. It is used by `LocalizedLink` to create correct link and by `LanguageSwitcher` to switch to correct language version of a page.
