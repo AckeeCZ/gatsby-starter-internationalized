@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "author": "Marek Janča <marek-janca@volny.cz>",
     "dependencies": {
-        "gatsby": "^2.1.24",
+        "gatsby": "^4.25.7",
         "gatsby-image": "^2.0.31",
         "gatsby-plugin-manifest": "^2.0.22",
         "gatsby-plugin-offline": "^2.0.24",
